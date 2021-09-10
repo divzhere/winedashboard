@@ -1,0 +1,66 @@
+@import '../../styles/colors.scss';
+@import '../../styles//typography.scss';
+
+.side_bar {
+
+    border-right: 1px solid;
+    border-color: $alice_grey;
+    max-width: fit-content;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 56px;
+
+
+    .side_bar_option {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        transition: 0.3s;
+        align-items: center;
+        padding: 16px 111px 16px 24px;
+        @extend .caption;
+        color: $body_text_color;
+        cursor: pointer;
+
+        svg {
+            margin-right: 19px;
+        }
+    }
+
+    .side_bar_option:hover {
+        background-color: $sidebar_selected;
+    }
+
+    .selected {
+        background-color: $sidebar_selected;
+        box-shadow: 2px 0px 0px #811434;
+        border-right: 2px solid;
+        border-color: $brand_color;
+        color: $brand_color;
+    }
+
+    .sidebar_footer {
+        position: absolute;
+        margin-left: 24.98px;
+        bottom: 71.7px;
+        color: $subtle_text_color;
+
+        .copyright {
+            @extend .small_caption;
+            margin-top: 13px;
+        }
+    }
+
+    .collapse_button {
+        position: absolute;
+        right: -12px;
+        z-index: 1000;
+        line-height: 20px;
+        cursor: pointer;
+        bottom: 15vw;
+    }
+}

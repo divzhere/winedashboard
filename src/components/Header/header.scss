@@ -1,0 +1,64 @@
+@import '../../styles/colors.scss';
+@import '../../styles//typography.scss';
+
+.header_container {
+    height: 56px;
+    background-color: $brand-color;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    justify-content: space-between;
+
+    .brand_container {
+        display: flex;
+        align-items: center;
+    }
+
+    .header_logo {
+        width: 135px;
+        object-fit: contain;
+        margin: 18px 0 18px 24px;
+    }
+
+    .header_search {
+        display: flex;
+        width: 354px;
+        background-color: #FFFFFF;
+        height: 32px;
+        border-radius: 4px;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-left: 140px;
+
+        .header_search_input {
+            @extend .input_text;
+            width: 90%;
+            border: none;
+        }
+
+        ::placeholder {
+            color: $subtle_text_color;
+            @extend .input_text;
+        }
+    }
+
+    .header_nav {
+        display: flex;
+        align-items: center;
+
+        .user_avatar {
+            display: flex;
+            align-items: center;
+            margin: 12px 25.5px 12px 36.5px;
+            @extend .subtitle_bold;
+            color: $white;
+
+            .user_avatar_img {
+                margin-left: 14px;
+                margin-right: 9px;
+            }
+        }
+    }
+}

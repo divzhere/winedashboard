@@ -1,0 +1,178 @@
+@import '../../styles/colors.scss';
+@import '../../styles/typography.scss';
+
+.sales_container {
+    margin-left: 34px;
+
+    .title {
+        color: $dark-color;
+        @extend .subtitle_bold;
+        margin-bottom: 16px;
+    }
+
+    .sales_card {
+        border: 1px solid $border_color;
+        border-radius: 4px;
+        padding: 16px;
+        padding-bottom: 0px;
+        ;
+        margin-right: 33px;
+
+        .sales_card_header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .title {
+                align-items: flex-start;
+                flex-direction: column;
+                display: flex;
+
+                .title_text {
+                    color: $dark_color;
+                    @extend .subtitle_normal;
+                }
+
+                .date {
+                    color: $grey_text_color;
+                    @extend .caption;
+                }
+            }
+
+            .sales_card_options {
+                display: flex;
+                align-items: center;
+
+                .refresh_btn {
+                    color: $body_text_color;
+                    @extend .caption;
+                    display: flex;
+                    align-items: center;
+                    margin-right: 32px;
+
+                    svg {
+                        margin-right: 8px;
+                    }
+                }
+
+                .filter {
+                    @extend .subtitle_bold;
+                    color: $subtle_text_color;
+                    margin-right: 6px;
+                }
+
+                .time {
+                    color: $dark_color;
+                    @extend .subtitle_bold;
+                    margin-right: 6px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+
+        .sales_card_body {
+            border-top: 1px solid $border_color;
+            display: flex;
+            justify-content: space-between;
+
+            .left_section {
+                width: 75%;
+                padding-right: 37px;
+            }
+
+            .sales_card_body_row {
+                margin-top: 16px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+
+                .sales_card_title {
+                    @extend .h3_text;
+                    color: $dark_color;
+                }
+
+                .sales_card_subtitle {
+                    @extend .subtitle_normal;
+                    color: $dark_color;
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        margin-right: 8px;
+                    }
+                }
+            }
+
+            .body_subtitle {
+                @extend .subtitle_bold;
+                color: $success_color;
+                margin-top: 8px;
+                margin-bottom: 31px;
+
+                svg {
+                    margin-right: 8px;
+
+                }
+            }
+
+
+
+            .right_section {
+                width: 25%;
+                padding: 24px 59px 0px 19px;
+                border-left: 1px solid $border_color;
+
+                .title {
+                    @extend .subtitle_bold;
+                    color: $subtle_text_color;
+                    margin-bottom: 16px;
+
+                }
+
+                .price {
+                    @extend .h4_text;
+                    color: $brand_color;
+                    margin-bottom: 8px;
+                }
+
+                .subtitle {
+                    @extend .subtitle_bold;
+                    color: $success_color;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 40px;
+
+                    svg {
+                        margin-right: 8px;
+
+                    }
+                }
+
+                .products_text {
+                    @extend .h4_text;
+                    color: $dark_color;
+                }
+            }
+        }
+    }
+
+    .custom_tooltip {
+        background-color: $body_text_color;
+        padding: 2px 6px 2px 8px;
+        @extend .input_text;
+        color: $white;
+        border-radius: 3px;
+
+    }
+
+    .recharts-cartesian-axis-tick {
+        color: $subtle_text_color;
+        @extend .small_caption;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
+}

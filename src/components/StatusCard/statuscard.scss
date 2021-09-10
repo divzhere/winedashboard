@@ -1,0 +1,48 @@
+@import '../../styles/typography.scss';
+@import '../../styles/colors.scss';
+
+.status_card_group {
+    margin-left: 34px;
+    margin-bottom: 24px;
+    display: flex;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px;
+        border-radius: 4px;
+        width: 258px;
+        margin-bottom: 24px;
+        margin-right: 30px;
+
+        .head {
+            @extend .subtitle_normal;
+            color: $subtle_text_color;
+            justify-content: space-between;
+            display: flex;
+            width: 100%;
+        }
+
+        .status_text {
+            color: $black;
+            @extend .h5_text;
+        }
+    }
+
+    .card:nth-of-type(1) {
+        box-shadow: 0px -2px 0px #FFAA2C, 0px 2px 11px rgba(0, 0, 0, 0.06);
+    }
+
+    .card:nth-of-type(2) {
+        box-shadow: 0px -2px 0px #2C67FF, 0px 2px 11px rgba(242, 242, 242, 0.5);
+    }
+
+    .card:nth-of-type(3) {
+        box-shadow: 0px -2px 0px #00CF3A, 0px 2px 11px rgba(242, 242, 242, 0.5);
+    }
+
+    .card:nth-of-type(4) {
+        box-shadow: 0px -2px 0px #FF1C1C, 0px 2px 11px rgba(242, 242, 242, 0.5);
+    }
+}
