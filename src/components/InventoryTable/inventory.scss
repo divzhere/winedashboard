@@ -154,6 +154,10 @@
             }
 
             .options {
+                display: flex;
+                align-content: center;
+                align-items: center;
+
                 span {
                     color: $secondary_color;
                     text-decoration: underline;
