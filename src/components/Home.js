@@ -5,6 +5,7 @@ import "./home.scss";
 import { ReactComponent as AddIcon } from "../assets/add_icon.svg";
 import StatusCardGroup from "./StatusCard/StatusCardGroup";
 import SalesDetails from "./SalesDetails/SalesDetails";
+import InventoryTable from "./InventoryTable/InventoryTable";
 export default function Home() {
   return (
     <>
@@ -20,6 +21,7 @@ export default function Home() {
         </div>
         <StatusCardGroup />
         <SalesDetails />
+        <InventoryTable />
       </section>
     </>
   );

@@ -1,0 +1,228 @@
+@import '../../styles/typography.scss';
+@import '../../styles/colors.scss';
+
+.inventory_section {
+    margin-left: 34px;
+    margin-top: 32px;
+
+    .title {
+        @extend .subtitle_normal;
+        margin-bottom: 16px;
+    }
+
+    table {
+        margin-bottom: 1rem;
+        background-color: transparent;
+        border-collapse: collapse;
+
+        thead {
+            th {
+                @extend .small_caption_bold;
+                color: $body_text_color;
+                text-transform: uppercase;
+                padding: 12px 0px;
+                border-top: 1px solid $alice_grey;
+            }
+
+            tr {
+                text-align: left;
+            }
+
+            th:nth-of-type(2) {
+                padding-left: 17px;
+            }
+        }
+
+        td {
+            padding: 16px 0px;
+            border-top: 1px solid $alice_grey;
+            padding-right: 56px;
+            @extend .caption;
+            color: $subtle_text_color;
+        }
+
+        td:nth-of-type(1) {
+            padding-right: 17px;
+        }
+
+        td:nth-last-child(2) {
+            color: $dark_color;
+        }
+
+        INPUT[type=checkbox] {
+            border: 1.5px solid $subtle_text_color;
+            border-radius: 4px;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        INPUT[type=checkbox]:checked {
+            background: url("../../assets/tick.svg") center center no-repeat;
+            border: none;
+            outline: none;
+        }
+    }
+
+    .product_cell {
+        display: flex;
+        align-items: center;
+        padding-left: 17px;
+
+        .product_img {
+            margin-right: 12px;
+        }
+
+        .product_details {
+            display: flex;
+            flex-direction: column;
+
+            .wine_name {
+                @extend .subtitle_normal;
+                color: $dark_color;
+                cursor: pointer;
+            }
+
+            .country {
+                @extend .input_text;
+                color: $subtle_text_color;
+
+            }
+        }
+    }
+
+    .product_cell:hover {
+        .wine_name {
+            color: $secondary_color;
+        }
+    }
+
+    .ratings_cell {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .ratings {
+            @extend .btn_text_small;
+            color: $body_text_color;
+            background-color: $frozen_color;
+            display: flex;
+            align-items: center;
+            padding: 4px 7px;
+            margin-right: 5.5px;
+            border-radius: 4px;
+        }
+
+    }
+
+    .expanded_row {
+        padding: 0px 21px 0px 43px;
+
+        .header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+            border-bottom: 1px solid $grey_border;
+
+            .product_details {
+                .product_title {
+                    @extend .subtitle_normal;
+                    color: $dark_color;
+                }
+
+                .subtitle {
+                    display: flex;
+                    align-items: center;
+
+                    .label {
+                        color: $subtle_text_color;
+                        margin-right: 42px;
+                        margin-bottom: 16px;
+                        margin-top: 8px;
+                        @extend .input_text;
+
+                        span {
+                            color: $dark_color;
+
+                        }
+                    }
+                }
+            }
+
+            .options {
+                span {
+                    color: $secondary_color;
+                    text-decoration: underline;
+                    @extend .btn_text;
+                }
+
+                svg {
+                    margin-left: 24px;
+                }
+            }
+        }
+
+        .body {
+            display: flex;
+
+            .label {
+                .title {
+                    @extend .small_caption_bold;
+                    color: $subtle_text_color;
+                    margin-top: 16px;
+                    margin-bottom: 8px;
+                }
+
+                .body {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+
+                    .body_item {
+                        display: flex;
+                        flex-direction: column;
+                        margin-right: 40px;
+
+                        span:nth-of-type(1) {
+                            @extend .caption;
+                            color: $dark_color;
+                        }
+
+                        span:nth-of-type(2) {
+                            @extend .btn_text_small;
+                            color: $body_text_color;
+                            margin: 10px 0px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 64px;
+                            background-color: $frozen_color;
+                            border-radius: 4px;
+                            padding: 4px 7px;
+                        }
+                    }
+
+                    .stock span:nth-of-type(2) {
+                        @extend .btn_text_small;
+                        color: $brand_color;
+                        background-color: $border_color;
+
+                    }
+                }
+
+            }
+
+            .label:nth-of-type(1) {
+                width: 50%;
+            }
+
+            .label:nth-of-type(2) {
+                width: 50%;
+            }
+        }
+    }
+}

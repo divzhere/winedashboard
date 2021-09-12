@@ -26,6 +26,13 @@
     line-height: 16px;
 }
 
+.btn_text_small {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+}
+
 .caption {
     font-style: normal;
     font-weight: 600;
@@ -38,6 +45,14 @@
     font-weight: normal;
     font-size: 12px;
     line-height: 16px;
+}
+
+.small_caption_bold {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.06em;
 }
 
 .title_bold {

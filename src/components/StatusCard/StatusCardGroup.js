@@ -4,8 +4,8 @@ import "./statuscard.scss";
 export default function StatusCardGroup() {
   return (
     <div className="status_card_group">
-      {status.map((card) => (
-        <div className="card">
+      {status.map((card, i) => (
+        <div className="card" key={i}>
           <div className="head">
             {card.title}
             {card.icon}
